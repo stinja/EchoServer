@@ -5,7 +5,7 @@ const port = process.env.port || 3000 // Uses port requested when running port=x
 app.get('/', (req, res) => { // Creates an app, takes in the values of req and res which are assigned in the query string
   var someVar = (req.query.foo) // Create variables and assigns value of key "foo"
   console.log(someVar) // Shows value of someVar in console, just a variable check for learning
-  //someVar = JSON.stringify(someVar) // Uncomment if wanting to display both the key and value
+  //someVar = JSON.stringify(someVar) // Uncomment if wanting to display both the key and value - be sure to remove foo from line 6
   res.send('Response: ' + someVar) // Responds by sending a string, verifying that it took the request + also prints out the value of someVar inside app
 })
 
