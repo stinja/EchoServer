@@ -17,7 +17,7 @@ app.listen(port, () => { // Function to listen on port assigned above in const p
 /**
  * Additional Notes
  * 
- * a JSON object
+ * a js object
  * { key: value }
  * 
  * ? is a delimeter which marks the beginning of a query string
