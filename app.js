@@ -1,12 +1,12 @@
 const express = require('express') // Defines express as a value to require express as a dependency
 const app = express() // Assigns the value of express above to app
-const port = 3000 // Assings the value of 3000 to port
+const port = process.env.port || 3000 // Uses port requested when running port=xxxx node app.js XOR Assings the value of 3000 to port
 
 app.get('/', (req, res) => { // Creates an app, takes in the values of req and res which are assigned in the query string
-  var someVar = (req.query.foo) // Prints requested query and the assigned value of foo from the query
-  console.log(someVar)
-  someVar = JSON.stringify(someVar)
-  res.send('Response: ' + someVar) // Responds by sending a string, verifying that it took the request
+  var someVar = (req.query.foo) // Create variables and assigns value of key "foo"
+  console.log(someVar) // Shows value of someVar in console, just a variable check for learning
+  //someVar = JSON.stringify(someVar) // Uncomment if wanting to display both the key and value
+  res.send('Response: ' + someVar) // Responds by sending a string, verifying that it took the request + also prints out the value of someVar inside app
 })
 
 app.listen(port, () => { // Function to listen on port assigned above in const port = 3000
